@@ -5616,6 +5616,16 @@ psa_status_t psa_key_derivation_input_bytes(
                                                data, data_length ) );
 }
 
+psa_status_t psa_key_derivation_input_integer(
+    psa_key_derivation_operation_t * operation,
+    psa_key_derivation_step_t step,
+    uint64_t value)
+{
+    return( psa_key_derivation_input_internal( operation, step,
+                                               PSA_KEY_TYPE_NONE,
+                                               value, sizeof(value) ) );
+}
+
 psa_status_t psa_key_derivation_input_key(
     psa_key_derivation_operation_t *operation,
     psa_key_derivation_step_t step,
