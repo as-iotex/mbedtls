@@ -240,7 +240,7 @@ if (USE_STATIC_MBEDTLS_LIBRARY)
     set(mbedcrypto_static_target ${mbedcrypto_target})
 endif()
 
-set(target_libraries ${mbedcrypto_target} ${mbedx509_target} ${mbedtls_target})
+set(target_libraries ${mbedcrypto_target})
 
 if(USE_STATIC_MBEDTLS_LIBRARY AND USE_SHARED_MBEDTLS_LIBRARY)
     string(APPEND mbedtls_static_target    "_static")
@@ -248,9 +248,7 @@ if(USE_STATIC_MBEDTLS_LIBRARY AND USE_SHARED_MBEDTLS_LIBRARY)
     string(APPEND mbedcrypto_static_target "_static")
 
     list(APPEND target_libraries
-        ${mbedcrypto_static_target}
-        ${mbedx509_static_target}
-        ${mbedtls_static_target})
+        ${mbedcrypto_static_target})
 endif()
 
 if(USE_STATIC_MBEDTLS_LIBRARY)
@@ -262,13 +260,6 @@ if(USE_STATIC_MBEDTLS_LIBRARY)
         target_link_libraries(${mbedcrypto_static_target} PUBLIC everest)
     endif()
 
-    add_library(${mbedx509_static_target} STATIC ${src_x509})
-    set_target_properties(${mbedx509_static_target} PROPERTIES OUTPUT_NAME mbedx509)
-    target_link_libraries(${mbedx509_static_target} PUBLIC ${libs} ${mbedcrypto_static_target})
-
-    add_library(${mbedtls_static_target} STATIC ${src_tls})
-    set_target_properties(${mbedtls_static_target} PROPERTIES OUTPUT_NAME mbedtls)
-    target_link_libraries(${mbedtls_static_target} PUBLIC ${libs} ${mbedx509_static_target})
 endif(USE_STATIC_MBEDTLS_LIBRARY)
 
 if(USE_SHARED_MBEDTLS_LIBRARY)
