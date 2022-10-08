@@ -8,7 +8,7 @@ A fork of [mbedTLS](https://github.com/Mbed-TLS/mbedtls) with some changes neces
 
 ## How to sync this repository with the official mbedtls in order to pull the latest updates
 
-The [mbedtls official repository](https://github.com/Mbed-TLS/mbedtls) is added to this fork as the remote **mbedtls-upstream*.  
+The [mbedtls official repository](https://github.com/Mbed-TLS/mbedtls) is added to this fork as the remote **mbedtls-upstream**.  
 In order to sync this fork with the mbedtls upstream run the following:  
 
 ```bash
@@ -20,6 +20,10 @@ git checkout development
 # Rebase the branch into the upstream
 git rebase mbedtls-upstream/master
 ```
+
+Alternatively, the sync fork button can be used from the Github interface  
+![image](https://user-images.githubusercontent.com/82106612/194701583-642e99cd-f7b5-48e6-a6d7-65c46504fad4.png)
+
 
 ## How to support a new version on mbedTLS in the machinefi SDK
 
