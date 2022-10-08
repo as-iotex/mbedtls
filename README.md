@@ -6,7 +6,7 @@ A fork of [mbedTLS](https://github.com/Mbed-TLS/mbedtls) with some changes neces
 
 - [machinefi-3.2.1](https://github.com/as-iotex/mbedtls/tree/machinefi-3.2.1) based on [mbedtls tag v3.2.1](https://github.com/Mbed-TLS/mbedtls/tree/v3.2.1).  
 
-## How tho sync this repository with the official mbedtls in order to pull the latest updates
+## How to sync this repository with the official mbedtls in order to pull the latest updates
 
 The [mbedtls official repository](https://github.com/Mbed-TLS/mbedtls) is added to this fork as the remote **mbedtls-upstream*.  
 In order to sync this fork with the mbedtls upstream run the following:  
