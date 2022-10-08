@@ -1,4 +1,4 @@
-# MbedTLS for for usage with IoTeX machinefi SDK
+# MbedTLS fork for usage with IoTeX machinefi SDK
 
 A fork of [mbedTLS](https://github.com/Mbed-TLS/mbedtls) with some changes necessary to support it's use with the IoTeX machinefi SDK.  
 
